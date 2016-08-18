@@ -10,7 +10,7 @@ https://github.com/agentlab/ru.agentlab.calendar/wiki/%D0%9D%D0%B0%D1%81%D1%82%D
 * Использовать другой Product Version:
 * Latest Release (Neon)
 * Другая URL-ссылка на файл конфигурации:
-https://raw.githubusercontent.com/eclipse-orbit/orbit-parent/master/org.eclipseorbit.setup/org.eclipseorbit.setup
+..* https://raw.githubusercontent.com/eclipse-orbit/orbit-parent/master/org.eclipseorbit.setup/org.eclipseorbit.setup
 * Необходимо выбрать другие проекты в окне Projects:
-** EclipseOrbit
-** SearchAssistant
+..* EclipseOrbit
+..* SearchAssistant
