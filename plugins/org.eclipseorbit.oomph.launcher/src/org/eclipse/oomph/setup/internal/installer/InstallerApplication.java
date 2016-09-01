@@ -21,12 +21,14 @@ import org.eclipse.oomph.setup.ui.wizards.SetupWizard.SelectionMemento;
 import org.eclipse.oomph.ui.ErrorDialog;
 import org.eclipse.oomph.ui.UIUtil;
 import org.eclipse.oomph.util.IOUtil;
+import org.eclipse.oomph.util.OS;
 import org.eclipse.oomph.util.OomphPlugin.Preference;
 import org.eclipse.oomph.util.PropertiesUtil;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.OperationCanceledException;
 import org.eclipse.core.runtime.Platform;
+import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.SubMonitor;
 import org.eclipse.equinox.app.IApplication;
 import org.eclipse.equinox.app.IApplicationContext;
@@ -66,6 +68,14 @@ public class InstallerApplication implements IApplication
     // This must come very early, before the first model is accessed, so that HTTPS can be authorized.
     IProvisioningAgent agent = P2Util.getCurrentProvisioningAgent();
     agent.registerService(UIServices.SERVICE_NAME, Installer.SERVICE_UI);
+
+    // get cmd-line params
+    String[] args = Platform.getCommandLineArgs();
+
+    for (String arg : args)
+    {
+      SetupInstallerPlugin.INSTANCE.log("HHHHHAAAAA::: " + arg, Status.INFO);
+    }
 
     Location location = Platform.getInstanceLocation();
     if (location != null)
@@ -232,7 +242,7 @@ public class InstallerApplication implements IApplication
           //$FALL-THROUGH$
         }
 
-        String launcher = getLauncher();
+        String launcher = OS.getCurrentLauncher(false);
         if (launcher != null)
         {
           try
@@ -420,25 +430,6 @@ public class InstallerApplication implements IApplication
   public void stop()
   {
     // Do nothing.
-  }
-
-  public static String getLauncher()
-  {
-    try
-    {
-      String launcher = PropertiesUtil.getProperty("eclipse.launcher");
-      if (launcher != null && new File(launcher).isFile())
-      {
-        return launcher;
-      }
-    }
-    catch (Throwable ex)
-    {
-      ex.printStackTrace();
-      //$FALL-THROUGH$
-    }
-
-    return null;
   }
 
   /**

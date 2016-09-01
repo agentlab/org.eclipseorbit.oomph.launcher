@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.8"?>
-<target name="Generated from OomphLauncher" sequenceNumber="4">
+<target name="Generated from OomphLauncher" sequenceNumber="10">
   <locations>
     <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
       <unit id="ch.qos.logback.classic" version="0.0.0"/>
       <unit id="ch.qos.logback.core" version="0.0.0"/>
       <unit id="ch.qos.logback.slf4j" version="0.0.0"/>
+      <unit id="com.google.guava" version="0.0.0"/>
       <unit id="com.google.inject" version="0.0.0"/>
       <unit id="com.google.inject.assistedinject" version="0.0.0"/>
       <unit id="com.google.inject.multibindings" version="0.0.0"/>
@@ -18,6 +19,7 @@
       <unit id="javax.servlet" version="0.0.0"/>
       <unit id="javax.servlet.jsp" version="0.0.0"/>
       <unit id="javax.xml" version="0.0.0"/>
+      <unit id="javax.xml.stream" version="0.0.0"/>
       <unit id="org.apache.ant" version="0.0.0"/>
       <unit id="org.apache.batik.css" version="0.0.0"/>
       <unit id="org.apache.batik.util" version="0.0.0"/>
@@ -25,6 +27,7 @@
       <unit id="org.apache.commons.codec" version="0.0.0"/>
       <unit id="org.apache.commons.io" version="0.0.0"/>
       <unit id="org.apache.commons.jxpath" version="0.0.0"/>
+      <unit id="org.apache.commons.lang" version="0.0.0"/>
       <unit id="org.apache.commons.logging" version="0.0.0"/>
       <unit id="org.apache.felix.gogo.command" version="0.0.0"/>
       <unit id="org.apache.felix.gogo.runtime" version="0.0.0"/>
@@ -32,11 +35,13 @@
       <unit id="org.apache.httpcomponents.httpclient" version="0.0.0"/>
       <unit id="org.apache.httpcomponents.httpcore" version="0.0.0"/>
       <unit id="org.apache.jasper.glassfish" version="0.0.0"/>
+      <unit id="org.apache.log4j" version="0.0.0"/>
       <unit id="org.apache.lucene.analysis" version="0.0.0"/>
       <unit id="org.apache.lucene.core" version="0.0.0"/>
       <unit id="org.apache.mina.core" version="0.0.0"/>
       <unit id="org.apache.sshd.core" version="0.0.0"/>
       <unit id="org.hamcrest.core" version="0.0.0"/>
+      <unit id="org.hamcrest.library" version="0.0.0"/>
       <unit id="org.junit" version="0.0.0"/>
       <unit id="org.mockito" version="0.0.0"/>
       <unit id="org.objenesis" version="0.0.0"/>
@@ -55,7 +60,6 @@
       <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20160520211859/repository"/>
     </location>
     <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-      <unit id="a.jre.javase" version="0.0.0"/>
       <unit id="org.eclipse.ant.core" version="0.0.0"/>
       <unit id="org.eclipse.compare" version="0.0.0"/>
       <unit id="org.eclipse.compare.core" version="0.0.0"/>
@@ -103,6 +107,8 @@
       <unit id="org.eclipse.e4.emf.xpath" version="0.0.0"/>
       <unit id="org.eclipse.e4.rcp.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.e4.rcp.feature.jar" version="0.0.0"/>
+      <unit id="org.eclipse.e4.tools.emf.ui" version="0.0.0"/>
+      <unit id="org.eclipse.e4.tools.services" version="0.0.0"/>
       <unit id="org.eclipse.e4.ui.bindings" version="0.0.0"/>
       <unit id="org.eclipse.e4.ui.css.core" version="0.0.0"/>
       <unit id="org.eclipse.e4.ui.css.swt" version="0.0.0"/>
@@ -280,6 +286,12 @@
       <unit id="org.eclipse.help.feature.jar" version="0.0.0"/>
       <unit id="org.eclipse.help.ui" version="0.0.0"/>
       <unit id="org.eclipse.help.webapp" version="0.0.0"/>
+      <unit id="org.eclipse.jdt.annotation" version="0.0.0"/>
+      <unit id="org.eclipse.jdt.core" version="0.0.0"/>
+      <unit id="org.eclipse.jdt.core.manipulation" version="0.0.0"/>
+      <unit id="org.eclipse.jdt.debug" version="0.0.0"/>
+      <unit id="org.eclipse.jdt.launching" version="0.0.0"/>
+      <unit id="org.eclipse.jdt.ui" version="0.0.0"/>
       <unit id="org.eclipse.jetty.continuation" version="0.0.0"/>
       <unit id="org.eclipse.jetty.http" version="0.0.0"/>
       <unit id="org.eclipse.jetty.io" version="0.0.0"/>
@@ -298,6 +310,8 @@
       <unit id="org.eclipse.osgi.compatibility.state" version="0.0.0"/>
       <unit id="org.eclipse.osgi.services" version="0.0.0"/>
       <unit id="org.eclipse.osgi.util" version="0.0.0"/>
+      <unit id="org.eclipse.pde.build" version="0.0.0"/>
+      <unit id="org.eclipse.pde.core" version="0.0.0"/>
       <unit id="org.eclipse.platform" version="0.0.0"/>
       <unit id="org.eclipse.platform.doc.user" version="0.0.0"/>
       <unit id="org.eclipse.platform.feature.group" version="0.0.0"/>
@@ -354,19 +368,21 @@
       <repository location="http://download.eclipse.org/eclipse/updates/4.6"/>
     </location>
     <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+      <unit id="a.jre" version="0.0.0"/>
       <unit id="org.apache.httpcomponents.httpclient" version="0.0.0"/>
       <unit id="org.eclipse.emf.common.ui" version="0.0.0"/>
       <unit id="org.eclipse.emf.common.ui.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.emf.common.ui.feature.jar" version="0.0.0"/>
+      <unit id="org.eclipse.emf.databinding" version="0.0.0"/>
+      <unit id="org.eclipse.emf.databinding.edit" version="0.0.0"/>
       <unit id="org.eclipse.emf.edit" version="0.0.0"/>
       <unit id="org.eclipse.emf.edit.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.emf.edit.feature.jar" version="0.0.0"/>
       <unit id="org.eclipse.emf.edit.ui" version="0.0.0"/>
       <unit id="org.eclipse.emf.edit.ui.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.emf.edit.ui.feature.jar" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.extractor.lib" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.jreinfo.win32.x86" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.jreinfo.win32.x86_64" version="0.0.0"/>
+      <unit id="org.eclipse.m2e.maven.runtime" version="0.0.0"/>
+      <unit id="org.eclipse.m2e.maven.runtime.slf4j.simple" version="0.0.0"/>
       <unit id="org.eclipse.userstorage" version="0.0.0"/>
       <unit id="org.eclipse.userstorage.ui" version="0.0.0"/>
       <repository location="http://download.eclipse.org/releases/neon"/>
@@ -381,51 +397,59 @@
       <repository location="https://eclipseguru.github.io/missing-swt-fragments/"/>
     </location>
     <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-      <unit id="org.eclipse.nebula.widgets.tablecombo" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.base" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.base.edit" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.jreinfo" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.jreinfo.ui" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.p2" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.p2.core" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.p2.doc" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.p2.edit" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.p2.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.p2.feature.jar" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.p2.ui" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.predicates" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.predicates.edit" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.preferences" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.resources" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.resources.edit" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.setup" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.setup.core" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.setup.core.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.setup.core.feature.jar" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.setup.doc" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.setup.edit" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.setup.editor" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.setup.feature.group" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.setup.feature.jar" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.setup.p2" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.setup.p2.edit" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.setup.sync" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.setup.ui" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.setup.ui.questionnaire" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.ui" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.util" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.workingsets" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.workingsets.edit" version="0.0.0"/>
-      <unit id="org.eclipse.oomph.workingsets.editor" version="0.0.0"/>
-      <repository location="http://download.eclipse.org/oomph/updates/nightly/"/>
-    </location>
-    <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
       <unit id="org.eclipse.userstorage.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.userstorage.feature.jar" version="0.0.0"/>
       <unit id="org.eclipse.userstorage.sdk" version="0.0.0"/>
       <unit id="org.eclipse.userstorage.sdk.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.userstorage.sdk.feature.jar" version="0.0.0"/>
       <repository location="http://download.eclipse.org/oomph/uss/updates/latest"/>
+    </location>
+    <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+      <unit id="org.eclipse.e4.tools.bundle.spy" version="0.0.0"/>
+      <unit id="org.eclipse.e4.tools.bundle.spy.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.e4.tools.bundle.spy.feature.feature.jar" version="0.0.0"/>
+      <unit id="org.eclipse.e4.tools.context.spy" version="0.0.0"/>
+      <unit id="org.eclipse.e4.tools.context.spy.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.e4.tools.context.spy.feature.feature.jar" version="0.0.0"/>
+      <unit id="org.eclipse.e4.tools.css.spy" version="0.0.0"/>
+      <unit id="org.eclipse.e4.tools.css.spy.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.e4.tools.css.spy.feature.feature.jar" version="0.0.0"/>
+      <unit id="org.eclipse.e4.tools.event.spy" version="0.0.0"/>
+      <unit id="org.eclipse.e4.tools.event.spy.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.e4.tools.event.spy.feature.feature.jar" version="0.0.0"/>
+      <unit id="org.eclipse.e4.tools.model.spy" version="0.0.0"/>
+      <unit id="org.eclipse.e4.tools.model.spy.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.e4.tools.model.spy.feature.feature.jar" version="0.0.0"/>
+      <unit id="org.eclipse.e4.tools.preference.spy" version="0.0.0"/>
+      <unit id="org.eclipse.e4.tools.preference.spy.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.e4.tools.preference.spy.feature.feature.jar" version="0.0.0"/>
+      <unit id="org.eclipse.e4.tools.spy" version="0.0.0"/>
+      <repository location="http://download.eclipse.org/e4/snapshots/org.eclipse.e4.tools/latest"/>
+    </location>
+    <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+      <unit id="org.eclipse.fx.core" version="0.0.0"/>
+      <unit id="org.eclipse.fx.core.databinding" version="0.0.0"/>
+      <unit id="org.eclipse.fx.core.di" version="0.0.0"/>
+      <unit id="org.eclipse.fx.core.di.context" version="0.0.0"/>
+      <unit id="org.eclipse.fx.core.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.fx.core.feature.feature.jar" version="0.0.0"/>
+      <unit id="org.eclipse.fx.core.fxml" version="0.0.0"/>
+      <unit id="org.eclipse.fx.core.guice" version="0.0.0"/>
+      <unit id="org.eclipse.fx.core.log4j" version="0.0.0"/>
+      <unit id="org.eclipse.fx.core.p2" version="0.0.0"/>
+      <unit id="org.eclipse.fx.core.slf4j" version="0.0.0"/>
+      <unit id="org.eclipse.fx.emf.databinding" version="0.0.0"/>
+      <unit id="org.eclipse.fx.javafx" version="0.0.0"/>
+      <unit id="org.eclipse.fx.osgi" version="0.0.0"/>
+      <unit id="org.eclipse.fx.osgi.util" version="0.0.0"/>
+      <unit id="org.eclipse.fx.target.rcp4.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.fx.target.rcp4.feature.feature.jar" version="0.0.0"/>
+      <unit id="org.eclipse.fx.ui.controls" version="0.0.0"/>
+      <unit id="org.eclipse.fx.ui.di.interopt" version="0.0.0"/>
+      <unit id="org.eclipse.fx.ui.panes" version="0.0.0"/>
+      <unit id="org.eclipse.fx.ui.services" version="0.0.0"/>
+      <unit id="org.eclipse.fx.ui.theme" version="0.0.0"/>
+      <repository location="http://download.eclipse.org/efxclipse/runtime-nightly/site"/>
     </location>
   </locations>
 </target>
